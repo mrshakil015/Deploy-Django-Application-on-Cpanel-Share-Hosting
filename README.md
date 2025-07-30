@@ -4,6 +4,9 @@ Context
 - [Step-01: Prepare Django Project](#step-01-prepare-django-project)
 - [Step-02: Logging Into the Cpanel](#-step-02-logged-in-into-the-cpanel-dashboard)
 - [Step-03: Create Subdomain](#-step-03--create-sub-domain-if-needed)
+- [Step-04: Setup Application](#-step-04--setup-application)
+- [Step-05: Setup MySQL Database](#-step-05--setup-mysql-database-if-you-want)
+- [Step-06: Upload Project Files](#-step-06--upload-project-files)
 
 ## ✅ Step-01: Prepare Django Project
 
@@ -123,7 +126,7 @@ Context
     pillow==10.3.0
     whitenoise==6.9.0
     ```
-    
+[Go To Context](context)
 
 ## ✅ Step-02: Logged-in into the Cpanel Dashboard
 
