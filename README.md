@@ -1,12 +1,15 @@
 # Deploy-Django-Application-on-Cpanel-Share-Hosting
 
-Context
+## Context
 - [Step-01: Prepare Django Project](#step-01-prepare-django-project)
 - [Step-02: Logging Into the Cpanel](#-step-02-logged-in-into-the-cpanel-dashboard)
 - [Step-03: Create Subdomain](#-step-03--create-sub-domain-if-needed)
 - [Step-04: Setup Application](#-step-04--setup-application)
 - [Step-05: Setup MySQL Database](#-step-05--setup-mysql-database-if-you-want)
 - [Step-06: Upload Project Files](#-step-06--upload-project-files)
+- [Step-07: Final Setup](#-step-07--final-setup)
+    - [If You Have Terminal Access](#if-you-have-terminal)
+    - [If You Don't Have Terminal Access](#if-you-dont-have-terminal-access)
 
 ## ✅ Step-01: Prepare Django Project
 
@@ -126,28 +129,34 @@ Context
     pillow==10.3.0
     whitenoise==6.9.0
     ```
-[Go To Context](context)
+📒[Go To Context](#context)
 
 ## ✅ Step-02: Logged-in into the Cpanel Dashboard
 
 ## ✅ Step-03:  Create Sub-Domain (if needed):
 
 - After login search `Domains`
+![image.png](/docs-img/image-3.png)
 - From the `Domains` Page click to the `Create A New Domain` button.
 - Then create and submit
 
-```python
-#Ex: test.yourmaindomain.com
-```
+    ```python
+    #Ex: test.yourmaindomain.com
+    ```
 
+📒[Go To Context](#context)
 ## ✅ Step-04:  Setup Application:
 
 - Go to `Setup Python App` page
+![image.png](/docs-img/image-4.png)
 - Click `Create Application` button
 - `Python Version:`  Select Python Version
 - `Application root:`  Enter project directory name. Where you upload your project files.
 - `Application URL:` Select the `Domain or Subdomain`
 - Then hit the `Create` button.
+![image.png](/docs-img/image-4.1.png)
+
+📒[Go To Context](#context)
 
 ## ✅ Step-05:  Setup MySQL Database (If you want)
 
@@ -188,6 +197,8 @@ DATABASES = {
 }
 ```
 
+📒[Go To Context](#context)
+
 ## ✅ Step-06:  Upload Project Files
 
 - Go to `File Manager` page
@@ -200,3 +211,54 @@ DATABASES = {
     ```
     
     `**🚨 Note:**` Must change the `yourProjectname` based on your project name
+
+📒[Go To Context](#context)
+
+## ✅ Step-07:  Final Setup
+
+- Go to `Setup Python App` page
+- Select your app and click Edit Icon
+
+### 🔹If You Have Terminal:
+
+- From the application copy the `virtual environment` command
+- Open the Terminal  and Paste the command
+- Then run the below command:
+- Install requirements file:
+    
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+- Migration and Migrate the database:
+    
+    ```bash
+    python manage.py makemigrations
+    ```
+    
+    ```bash
+    python manage.py migrate
+    ```
+    
+- Then Apply collect static command to collects all static files from apps and puts them into one central directory for easy serving in production:
+    
+    ```python
+    python manage.py collectstatic
+    ```
+
+📒[Go To Context](#context)
+
+### 🔹If You Don’t Have Terminal Access:
+
+- From the Application Setup Page apply the command manually
+- Write and Add `requirements.txt` into this section and click `Run Pip Install`. Note: Sometimes it send error message first try. If you fetch error then run again.
+
+    ![image.png](/docs-img/image-7.1.png)
+
+- Then into this section run other command and click `Run Script` button without `py or python`:
+
+    ![image.png](/docs-img/image-7.2.png)
+
+    After that click the `RESTART` button. Now you can visit your application.
+
+📒[Go To Context](#context)
