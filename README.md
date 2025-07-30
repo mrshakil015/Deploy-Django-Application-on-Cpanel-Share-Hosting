@@ -1,5 +1,10 @@
 # Deploy-Django-Application-on-Cpanel-Share-Hosting
 
+Context
+- [Step-01: Prepare Django Project](#step-01-prepare-django-project)
+- [Step-02: Logging Into the Cpanel](#-step-02-logged-in-into-the-cpanel-dashboard)
+- [Step-03: Create Subdomain](#-step-03--create-sub-domain-if-needed)
+
 ## ✅ Step-01: Prepare Django Project
 
 ### 🔹Modify `settings.py`
@@ -163,7 +168,7 @@
     ![image.png](/docs-img/image-5.4.png)
     
 
-`Alert:` Must be copy the Database Name, Username and Password. Because need to configure database on the settings.py
+`**🚨 Alert:**` Must be copy the Database Name, Username and Password. Because need to configure database on the settings.py
 
 ### 🔹Database Configuration
 
@@ -191,4 +196,4 @@ DATABASES = {
     from yourProjectname.wsgi import application
     ```
     
-    `Note:` Must be change the `yourProjectname` based on your project name
+    `**🚨 Note:**` Must change the `yourProjectname` based on your project name
