@@ -56,10 +56,10 @@
 - Set `Static & Media Files` root in `settings.py`
     
     ```python
-    STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_URL = 'static/'
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = BASE_DIR / 'staticfiles/'
+    MEDIA_ROOT = BASE_DIR / 'media/'
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
     ```
     
@@ -91,10 +91,10 @@
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
     
-    STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_URL = 'static/'
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = BASE_DIR / 'staticfiles/'
+    MEDIA_ROOT = BASE_DIR / 'media/'
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
     ```
     
