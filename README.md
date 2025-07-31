@@ -129,6 +129,10 @@
     pillow==10.3.0
     whitenoise==6.9.0
     ```
+    For auto create `requirements.txt` used below code:
+   ```python
+    pip freeze > requirements.txt
+   ```
 📒[Go To Context](#context)
 
 ## ✅ Step-02: Logged-in into the Cpanel Dashboard
