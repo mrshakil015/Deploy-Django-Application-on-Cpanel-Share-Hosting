@@ -1,4 +1,4 @@
-# Deploy-Django-Application-on-Cpanel-Share-Hosting
+# Deploy-Django-Application-on-Shared-Hosting-using-Cpanel
 
 ## Context
 - [Step-01: Prepare Django Project](#step-01-prepare-django-project)
